@@ -1,0 +1,189 @@
+Brice  Aldrich
+
+Hartford City, IN , United States
+2605829842
+baldrich@protonmail.com
+
+Professional Summary
+
+Lead Go Engineer and Backend Architect with 7 years of experience driving innovation across industries like 911 telecommunications, blockchain, transportation, finance and credit. Led multiples teams to develop secure, high-performance backend systems, related to identity, authentication/authorization, and finance. Interested in growth technologies and building production ready products from the ground up.
+
+Skills
+
+Go
+
+Typescript
+
+Swift
+
+Javascript
+
+Haskell
+
+Python
+
+Docker
+
+Kubernetes
+
+AWS EKS
+
+AWS RDS
+
+AWS IAM
+
+AWS Elasticache
+
+AWS SQS
+
+AWS Route53
+
+AWS SES
+
+AWS ECR
+
+AWS KMS
+
+Mongo DB
+
+Mongo DB Atlas
+
+Twilio
+
+Telesign
+
+Git
+
+Gitlab
+
+Gitlab-CI
+
+Helm
+
+Terraform
+
+Jenkins
+
+Blockchain
+
+GRPC
+
+OAuth2
+
+OIDC
+
+WebAuthn
+
+DPoP 
+
+Cryptography
+
+EntGo
+
+Linux
+
+MySQL
+
+Postgres
+
+Redis
+
+Datadog
+
+Grafana
+
+Prometheus
+
+Experience
+
+April 2021 - Current
+
+Equifax/Cognizant - Remote
+Lead Go Engineer - Backend Architect
+
+Ownership over several high profile projects around digital-identity, authentication, authorization, and tokens.
+Ownership and lead engineer for Equifax's next generation digital-identity-service.
+Ownership and lead engineer for Equifax's internal token issuance service. 
+Ownership and lead engineer over  Equifax's  next generation authentication and authorization service. 
+Ownership and lead over supporting customer facing SDKs.
+Built many of these services from the ground up using technologies such as demonstrating proof of possession, webauthn, split tokens, and more.
+
+May 2020 - April 2021
+
+CamlCase Inc. - Remote
+Senior Software Engineer and SRE Lead
+
+Ownership over all infrastructure and SRE related projects.
+Built and maintained CI/CD, EKS clusters, deployment environments, and utilities. 
+Built infrastructure in a decentralized manner using smart contracts and IPFS.
+Built several backend services related to analytics of a decentralized exchange using Go and Haskell. 
+Ran stand ups and ticket organization and creation.
+
+January 2020 - December 2021
+
+Brice Aldrich Development LLC - Remote
+Senior Go Engineer - GoTezos Library Owner
+
+Built and maintained an open source library interfacing with the Tezos blockchain RPC in Go.
+Built cryptographic functions to create wallets, sign operations, and verify operations. 
+Built structures and tooling around reading blocks and smart contracts on the chain. 
+Built batch payment tools to facilitate payments for proof of stake businesses. 
+Built infrastructure related tooling to deploy a proof of stake operation. 
+Ran a proof of stake service where at it's peak had several million in assets represented. 
+Received a large grant to continue open source development over a year.
+
+October 2019 - May 2020
+
+OneCause - Indianapolis
+Lead/Senior Go Engineer - Core Architecture
+
+Built and maintained core Go libraries central to the microservices that facilitated payments. 
+Built and maintained core Go libraries central to the microservices that facilitated donor auctions and billing. 
+Advised and collaborated with the general architecture team aiding in decisions on over all product architecture. 
+Worked with junior developers on progressing their skills and careers.
+
+March 2019 - October 2019
+
+Apple - Remote
+Golang Security Engineer - Cloud Identity
+
+Built and helped design apples internal authentication service similar to AWS IAM. 
+Helped design policy based management solutions to authenticate internal apple customers into their kubernetes clusters and development environments. 
+Helped build and design CLI utilities related to authentication and managing clusters. 
+Used technologies such as oauth2, oidc, grpc, go, and opa. 
+
+January 2019 - December 2019
+
+Tezos Marigold - Remote
+Part Time Software Engineer Contractor
+
+Built and designed supporting development tooling around a higher level smart contract language called LIGO. 
+Built syntax highlighting for the various forms of LIGO. 
+Built a simple language server and vscode plugin for the various formats of LIGO. 
+Tested LIGO as a language and deployed test smart contracts to the tezos blockchain.
+
+November 2018 - March 2019
+
+Transworks - Fort Wayne IN
+Backend Go Engineer
+
+Optimized existing Go code by introducing concurrency models. 
+Optimized database queries using legacy technologies related to the railroad transportation industry.  
+Implemented requested features end to end by collaborating with all team members. 
+Helped facilitate project direction and manage service now.
+
+May 2015 - November 2018
+
+INdigital - Fort Wayne IN
+Research And Development Engineer
+
+Collaborate, design, and develop proof of concept technologies related to 911 telecommunications and routing. 
+Build out developer tooling using virtualization and automation tools. 
+Built protocol parsers for specific binary data formats and telecom related protocols. 
+Built and improved existing systems related to routing. 
+Helped with feature work and supporting tools related to text to 911 products.
+
+Education
+
+Purdue University - Fort Wayne Fort Wayne
+Computer Science
