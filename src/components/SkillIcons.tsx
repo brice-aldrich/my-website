@@ -17,8 +17,8 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, position }) => {
     const animateIcon = () => {
       if (!isMounted) return;
 
-      const randomDelay = Math.random() * 5000; // Delay between 0 and 5 seconds
-      const displayDuration = 3000 + Math.random() * 4000; // Duration between 3 and 7 seconds
+      const randomDelay = Math.random() * 5000; 
+      const displayDuration = 3000 + Math.random() * 4000; 
 
       const fadeInTimeout = setTimeout(() => {
         if (!isMounted) return;
@@ -30,21 +30,17 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, position }) => {
           setOpacity(0);
           setScale(0.8);
 
-          // Repeat the animation
           animateIcon();
         }, displayDuration);
 
-        // Clear fadeOutTimeout if the component unmounts
         return () => clearTimeout(fadeOutTimeout);
       }, randomDelay);
 
-      // Clear fadeInTimeout if the component unmounts
       return () => clearTimeout(fadeInTimeout);
     };
 
     animateIcon();
 
-    // Cleanup function to prevent state updates on unmounted components
     return () => {
       isMounted = false;
     };
@@ -65,7 +61,7 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, position }) => {
         transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
         opacity: opacity,
         transform: `scale(${scale})`,
-        zIndex: 1, // Ensure icons are beneath the AppBar
+        zIndex: 1, 
         '&:hover': {
           transform: `scale(${scale * 1.1})`,
         },
@@ -89,7 +85,6 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, position }) => {
   );
 };
 
-// Define skillIcons outside the component for stability
 const skillIconsList = [
   '/skillicons/aws.png',
   '/skillicons/docker.webp',
@@ -110,19 +105,19 @@ const skillIconsList = [
 
 const SkillIcons: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const theme = useTheme(); // Get the theme object
+  const theme = useTheme(); 
   const [iconPositions, setIconPositions] = useState<
     Array<{ top: number; left: number }>
   >([]);
 
-  const skillIcons = React.useMemo(() => skillIconsList, []); // Stable due to empty dependency array
+  const skillIcons = React.useMemo(() => skillIconsList, []); 
 
   useEffect(() => {
     const calculatePositions = () => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
         const containerHeight = containerRef.current.offsetHeight;
-        const iconSize = 80; // Size of each icon bubble
+        const iconSize = 80; 
         const positions: Array<{ top: number; left: number }> = [];
 
         const isOverlapping = (newPos: { top: number; left: number }) => {
@@ -150,27 +145,25 @@ const SkillIcons: React.FC = () => {
       }
     };
 
-    // Calculate positions on mount
     calculatePositions();
 
-    // Recalculate positions on window resize
     window.addEventListener('resize', calculatePositions);
     return () => {
       window.removeEventListener('resize', calculatePositions);
     };
-  }, [skillIcons]); // Included 'skillIcons' as dependency
+  }, [skillIcons]);
 
   return (
     <Box
       ref={containerRef}
       sx={{
         position: 'absolute',
-        top: theme.mixins.toolbar.minHeight, // Adjust top position
+        top: theme.mixins.toolbar.minHeight, 
         right: 0,
         bottom: 0,
         width: '50%',
         overflow: 'hidden',
-        zIndex: theme.zIndex.appBar - 1, // Ensure it's below the AppBar
+        zIndex: theme.zIndex.appBar - 1, 
       }}
     >
       {iconPositions.length === skillIcons.length &&

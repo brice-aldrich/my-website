@@ -21,7 +21,7 @@ const BackgroundBox = styled(Box)(({ theme }) => ({
   backgroundColor: 'hsla(110, 100%, 93%, 1)',
   minHeight: '70vh',
   padding: theme.spacing(4),
-  paddingTop: 'calc(64px + env(safe-area-inset-top))', // Adjust top padding to account for AppBar height and safe area
+  paddingTop: 'calc(64px + env(safe-area-inset-top))',
   position: 'relative',
   overflow: 'hidden',
 }));

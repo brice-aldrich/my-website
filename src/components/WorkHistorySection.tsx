@@ -202,7 +202,7 @@ const WorkHistorySection: React.FC = () => {
       sx={{
         py: 8,
         bgcolor: 'background.default',
-        boxShadow: '0px 40px 40px -40px rgba(0,0,0,0.1), 0px -40px 40px -40px rgba(0,0,0,0.1)', // Top and bottom shadows
+        boxShadow: '0px 40px 40px -40px rgba(0,0,0,0.1), 0px -40px 40px -40px rgba(0,0,0,0.1)', 
         position: 'relative',
         zIndex: 1,
       }}
