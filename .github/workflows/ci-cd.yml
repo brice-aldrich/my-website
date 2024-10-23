@@ -113,6 +113,7 @@ jobs:
   qa-terraform-plan:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: qa
     
     steps:
       - name: Checkout repository
@@ -209,6 +210,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: [qa-build-and-deploy]
+    environment: prod
     
     steps:
       - name: Checkout repository
