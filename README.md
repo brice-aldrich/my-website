@@ -1,47 +1,133 @@
-# Getting Started with Create React App
+# Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website built with React and TypeScript.
 
-## Available Scripts
+## 🛠 Tech Stack
 
-In the project directory, you can run:
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Package Manager:** Yarn
+- **State Management:** React Context API
+- **Testing:** Jest & React Testing Library
+- **Linting:** ESLint
+- **Code Formatting:** Prettier
 
-### `npm start`
+## ☁️ Infrastructure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The website is hosted on AWS using a modern, scalable architecture managed with Terraform.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Cloud Components
 
-### `npm test`
+- **S3**: Static website hosting
+- **CloudFront**: Global CDN distribution
+- **Route53**: DNS management
+- **ACM**: SSL certificate management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Infrastructure Diagram
 
-### `npm run build`
+![Flow Chart](./infra/flowchart.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Infrastructure Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Global Content Delivery**: CloudFront CDN ensures low-latency access worldwide
+- **Secure Access**: HTTPS-only access with automatic HTTP to HTTPS redirection
+- **SPA Support**: Custom error handling for Single Page Application routing
+- **Cost-Effective**: Pay-as-you-go pricing with high scalability
+- **Version Control**: Infrastructure as Code using Terraform
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js (v16 or higher)
+- Yarn package manager
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone the repository
+```bash
+git clone https://github.com/brice-aldrich/my-website.git
+cd my-website
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Install dependencies
+```bash
+yarn install
+```
 
-## Learn More
+3. Start the development server
+```bash
+yarn dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Build for production
+```bash
+yarn build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# my-website
+## 📂 Project Structure
+
+```
+src
+├── App.css
+├── App.test.tsx
+├── App.tsx
+├── components
+│   ├── AboutSection.tsx
+│   ├── ContactSection.tsx
+│   ├── FooterSection.tsx
+│   ├── MainSection.tsx
+│   ├── SkillIcons.tsx
+│   ├── SkillsSection.tsx
+│   ├── TopBar.tsx
+│   └── WorkHistorySection.tsx
+├── index.css
+├── index.tsx
+├── logo.svg
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+├── setupTests.ts
+└── theme
+    └── theme.tsx
+```
+
+## 📱 Features
+
+- Responsive design that works on all device sizes
+- Animations
+- Contact form
+
+## 🔧 Scripts
+
+- `yarn dev`: Start development server
+- `yarn build`: Build for production
+- `yarn preview`: Preview production build
+- `yarn lint`: Run ESLint
+- `yarn format`: Format code with Prettier
+- `yarn type-check`: Run TypeScript type checking
+
+## 🤝 Contributing
+
+While this is a personal website, I welcome any suggestions or improvements. Feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add some improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE.md).
+
+## 📞 Contact
+
+Feel free to reach out if you have any questions or suggestions:
+
+- GitHub: [@brice-aldrich](https://github.com/yourusername)
+- LinkedIn: [Brice Aldrich](https://www.linkedin.com/in/brice-aldrich-1046bb85/)
+- Email: me@bricealdrich.com
+
+---
+
+Made with ❤️ using React & TypeScript
