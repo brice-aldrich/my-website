@@ -10,7 +10,6 @@ on:
 
 jobs:
   prod-terraform-plan:
-    if: github.event.inputs.confirm_deployment == true
     runs-on: ubuntu-latest
     environment: prod
     
