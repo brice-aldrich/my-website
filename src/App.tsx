@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import TopBar from './components/TopBar';
 import MainSection from './components/MainSection';
 import AboutSection from './components/AboutSection';

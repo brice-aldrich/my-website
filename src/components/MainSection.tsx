@@ -143,6 +143,7 @@ const MainSection = () => {
                 </Grid>
                 <MapContainer>
                   <iframe
+                    title="Indianapolis Location Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98118.655981505!2d-86.2151497665933!3d39.77988729160577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2sIndianapolis%2C%20IN!5e0!3m2!1sen!2sus!4v1726928869628!5m2!1sen!2sus"
                     width="100%"
                     height="100%"

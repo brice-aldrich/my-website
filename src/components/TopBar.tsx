@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -25,6 +25,15 @@ import CodeIcon from '@mui/icons-material/Code';
 import WorkIcon from '@mui/icons-material/Work';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import HouseIcon from '@mui/icons-material/House';
+
+const MENU_ITEMS = [
+  { text: 'Home', icon: <HouseIcon /> },
+  { text: 'About', icon: <PersonIcon /> },
+  { text: 'Skills', icon: <CodeIcon /> },
+  { text: 'Experience', icon: <WorkIcon /> },
+  { text: 'Contact', icon: <ContactMailIcon /> },
+];
+
 
 export default function ResponsiveAppBar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -55,13 +64,7 @@ export default function ResponsiveAppBar() {
     }
   };
 
-  const menuItems = [
-    { text: 'Home', icon: <HouseIcon /> },
-    { text: 'About', icon: <PersonIcon /> },
-    { text: 'Skills', icon: <CodeIcon /> },
-    { text: 'Experience', icon: <WorkIcon /> },
-    { text: 'Contact', icon: <ContactMailIcon /> },
-  ];
+  const menuItems = useMemo(() => MENU_ITEMS, []);
 
   const sideList = () => (
     <Box
