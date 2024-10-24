@@ -2,6 +2,7 @@
 
 A modern, responsive personal portfolio website built with React and TypeScript.
 
+
 ## 🛠 Tech Stack
 
 - **Frontend Framework:** React 18

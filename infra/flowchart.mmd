@@ -1,0 +1,40 @@
+flowchart TB
+    subgraph Internet
+        users((Internet Users))
+    end
+
+    subgraph AWS Cloud
+        subgraph CloudFront["CloudFront Distribution"]
+            cf[("CloudFront\nCache")]
+            oai["Origin Access\nIdentity"]
+        end
+
+        subgraph S3["S3 Bucket"]
+            direction TB
+            website_files["Website Files"]
+            index["index.html"]
+            error["Error Document\n(index.html)"]
+            bucket_policy["Bucket Policy\n(Public Read)"]
+        end
+    end
+
+    users -->|"HTTPS Request"| cf
+    cf -->|"Cache Hit"| users
+    cf -->|"Cache Miss"| oai
+    oai -->|"s3:GetObject"| S3
+    
+    %% Styling
+    classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white
+    classDef component fill:#1A73E8,stroke:#232F3E,stroke-width:2px,color:white
+    classDef user fill:#70B5F9,stroke:#232F3E,stroke-width:2px
+    
+    class CloudFront,S3 aws
+    class cf,oai,website_files,index,error,bucket_policy component
+    class users user
+
+    %% Notes
+    subgraph Configuration
+        direction TB
+        note1["CloudFront Settings:\n• IPv6 Enabled\n• Default Root: index.html\n• Cache: 0s - 24h\n• HTTPS Redirect"]
+        note2["S3 Settings:\n• Public Access Enabled\n• Website Hosting\n• Error Page → index.html"]
+    end
