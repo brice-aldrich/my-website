@@ -83,9 +83,18 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Get Terraform Outputs
+        id: terraform-outputs
+        run: |
+          aws s3 cp s3://mail-service-terraform-state-dev/mail-service-dev/terraform.tfstate ./terraform.tfstate
+          API_ENDPOINT=$(terraform output -raw api_endpoint)
+          echo "API_ENDPOINT=${API_ENDPOINT}"
+          echo "mail_service_url=${API_ENDPOINT}" >> $GITHUB_OUTPUT
+
       - name: Deploy Application
         env:
           NODE_OPTIONS: '--openssl-legacy-provider'
+          REACT_APP_MAIL_SERVICE_URL: ${{ steps.terraform-outputs.outputs.mail_service_url }}
         run: |
           cd infra/tf/dev
           terraform init
@@ -97,6 +106,8 @@ jobs:
           rm -rf node_modules yarn.lock
           yarn install --frozen-lockfile
           
+          echo "REACT_APP_MAIL_SERVICE_URL=${REACT_APP_MAIL_SERVICE_URL}"
+          echo "REACT_APP_MAIL_SERVICE_URL=${REACT_APP_MAIL_SERVICE_URL}" >> .env
           # Build the application
           yarn build
           

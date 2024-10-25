@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const baseURL = 'https://mail.bricealdrich.com'; 
+  const baseURL = process.env.REACT_APP_MAIL_SERVICE_URL || 'https://mail.bricealdrich.com';
   const axiosInstance = axios.create({
     baseURL,
     timeout: 10000,
